@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-template
+  liquibase:
+    change-log: db/changelog-master.xml
+    default-schema: app_schema
+  datasource:
+    url: ${DB_URL}
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}

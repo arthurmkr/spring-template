@@ -1,13 +1,10 @@
 package blank;
 
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 
-@SpringBootTest(classes = TestConfig.class, properties = {
-        "spring.main.allow-bean-definition-overriding=true"
-})
+@DisableExternalDependency
 public class BaseDbTest {
     @Container
     private static final PostgreSQLContainer container = new PostgreSQLContainer("postgres:14.3-alpine");

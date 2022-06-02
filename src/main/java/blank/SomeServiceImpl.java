@@ -1,11 +1,13 @@
 package blank;
 
-import org.springframework.stereotype.Service;
+import lombok.RequiredArgsConstructor;
 
-@Service
+@RequiredArgsConstructor
 public class SomeServiceImpl implements SomeService {
+    private final String param;
+
     @Override
-    public void helloWorld() {
-        System.out.println("Hello World!");
+    public String getParam() {
+        return param;
     }
 }

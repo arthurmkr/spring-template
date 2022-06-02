@@ -1,5 +1,5 @@
 package blank;
 
 public interface SomeService {
-    void helloWorld();
+    String getParam();
 }

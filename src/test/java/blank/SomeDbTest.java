@@ -11,10 +11,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SomeDbTest extends BaseDbTest {
     @Autowired
+    SomeService service;
+
+    @Autowired
     JdbcTemplate jdbcTemplate;
 
     @Test
     void helloWorld() {
+        System.out.println(service.getParam());
         assertThat(jdbcTemplate).isNotNull();
         insertRecord("123");
 
